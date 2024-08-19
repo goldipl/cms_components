@@ -11,3 +11,6 @@ down:
 
 logs:
 	docker-compose logs -f
+
+attach:
+	docker-compose exec web bash

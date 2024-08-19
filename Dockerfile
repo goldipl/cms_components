@@ -1,5 +1,5 @@
 # Use an official Node.js runtime as a parent image
-FROM node:18
+FROM node:20-alpine
 
 # Set the working directory in the container
 WORKDIR /cms_components
@@ -15,12 +15,13 @@ RUN pnpm install
 
 # Copy the rest of the application
 COPY . ./
-
+# RUN chmod +x ./entrypoint.sh
 # Build the application
-RUN pnpm build
+# RUN pnpm build
 
 # Expose the port the app runs on
 EXPOSE 5173
 
+# ENTRYPOINT ["./entrypoint.sh"]
 # Command to run the app
 CMD ["pnpm", "run", "dev"]

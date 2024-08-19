@@ -1,0 +1,8 @@
+#root {
+}
+.custom-menu {
+  border-inline-end: none !important;
+}
+.custom-card {
+  overflow: hidden;
+}
